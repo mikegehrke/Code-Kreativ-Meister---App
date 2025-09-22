@@ -1,0 +1,230 @@
+{
+  "name": "Code-Kreativ-Meister",
+  "short_name": "CKM",
+  "description": "Die ultimative TikTok-Alternative für Nightlife und Creator",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#3B82F6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "de-DE",
+  "dir": "ltr",
+  
+  "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  
+  "screenshots": [
+    {
+      "src": "/screenshots/mobile-home.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Startseite auf Mobile"
+    },
+    {
+      "src": "/screenshots/mobile-video.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Video-Player auf Mobile"
+    },
+    {
+      "src": "/screenshots/desktop-home.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Startseite auf Desktop"
+    },
+    {
+      "src": "/screenshots/desktop-editor.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Video-Editor auf Desktop"
+    }
+  ],
+  
+  "categories": [
+    "social",
+    "entertainment",
+    "photo",
+    "video"
+  ],
+  
+  "shortcuts": [
+    {
+      "name": "Video erstellen",
+      "short_name": "Erstellen",
+      "description": "Neues Video aufnehmen oder bearbeiten",
+      "url": "/create",
+      "icons": [
+        {
+          "src": "/icons/shortcut-create.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Live gehen",
+      "short_name": "Live",
+      "description": "Live-Stream starten",
+      "url": "/go-live",
+      "icons": [
+        {
+          "src": "/icons/shortcut-live.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Nachrichten",
+      "short_name": "Chat",
+      "description": "Private Nachrichten anzeigen",
+      "url": "/inbox",
+      "icons": [
+        {
+          "src": "/icons/shortcut-messages.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Analytics",
+      "short_name": "Stats",
+      "description": "Performance-Statistiken anzeigen",
+      "url": "/analytics",
+      "icons": [
+        {
+          "src": "/icons/shortcut-analytics.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.codekreativmeister.app",
+      "id": "com.codekreativmeister.app"
+    },
+    {
+      "platform": "itunes",
+      "url": "https://apps.apple.com/app/code-kreativ-meister/id123456789",
+      "id": "123456789"
+    }
+  ],
+  
+  "prefer_related_applications": false,
+  
+  "protocol_handlers": [
+    {
+      "protocol": "web+ckm",
+      "url": "/share?url=%s"
+    }
+  ],
+  
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "media",
+          "accept": ["image/*", "video/*", "audio/*"]
+        }
+      ]
+    }
+  },
+  
+  "file_handlers": [
+    {
+      "action": "/edit-video",
+      "accept": {
+        "video/*": [".mp4", ".webm", ".mov", ".avi"]
+      }
+    },
+    {
+      "action": "/edit-image",
+      "accept": {
+        "image/*": [".jpg", ".jpeg", ".png", ".gif", ".webp"]
+      }
+    }
+  ],
+  
+  "launch_handler": {
+    "client_mode": ["navigate-existing", "auto"]
+  },
+  
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  
+  "display_override": [
+    "window-controls-overlay",
+    "minimal-ui",
+    "standalone",
+    "browser"
+  ],
+  
+  "handle_links": "preferred",
+  
+  "capture_links": "existing-client-navigate"
+}
