@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* NightHub Design System - Light Mode */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    /* NightHub Brand Colors */
+    --primary: 280 100% 65%; /* Electric Purple */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 280 100% 75%;
+    
+    --secondary: 240 100% 12%; /* Deep Dark Blue */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 300 88% 55%; /* Hot Pink */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 280 100% 65%;
+
+    --radius: 0.75rem;
+
+    /* NightHub Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-dark: linear-gradient(135deg, hsl(var(--secondary)), hsl(240 100% 8%));
+    --gradient-glow: linear-gradient(135deg, hsl(var(--primary-glow) / 0.8), hsl(var(--accent) / 0.8));
+    
+    /* NightHub Shadows */
+    --shadow-neon: 0 0 20px hsl(var(--primary) / 0.5);
+    --shadow-glow: 0 8px 32px hsl(var(--primary) / 0.3);
+    --shadow-card: 0 4px 16px hsl(240 10% 3.9% / 0.12);
+
+    /* Animation */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* NightHub Design System - Dark Mode */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    /* NightHub Brand Colors - Dark Mode */
+    --primary: 280 100% 70%; /* Brighter Purple for dark */
+    --primary-foreground: 240 10% 3.9%;
+    --primary-glow: 280 100% 80%;
+
+    --secondary: 240 10% 10%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 300 88% 60%; /* Brighter Pink for dark */
+    --accent-foreground: 240 10% 3.9%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 280 100% 70%;
+
+    /* NightHub Gradients - Dark Mode */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-dark: linear-gradient(135deg, hsl(240 10% 3.9%), hsl(240 10% 1%));
+    --gradient-glow: linear-gradient(135deg, hsl(var(--primary-glow) / 0.9), hsl(var(--accent) / 0.9));
+    
+    /* NightHub Shadows - Dark Mode */
+    --shadow-neon: 0 0 30px hsl(var(--primary) / 0.7);
+    --shadow-glow: 0 8px 32px hsl(var(--primary) / 0.4);
+    --shadow-card: 0 4px 16px hsl(0 0% 0% / 0.3);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
